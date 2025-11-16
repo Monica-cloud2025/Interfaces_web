@@ -1,0 +1,99 @@
+            /* --- unifico diseño de las 3 páginas--- */
+        :root {
+            --color-primario: #4b0082; 
+            --color-acento: #ffc107; 
+            --color-fondo: #f4f4f4; 
+            --color-blanco: #ffffff;
+            
+            /* Fuente y tamaño  */
+            --fuente-principal: 'Roboto', 'Arial', sans-serif;
+            --tamano-letra-base: 16px;
+            --ancho-maximo: 1200px;
+        }
+       /* --- CONTENEDORES PRINCIPALES --- */
+        /*--mismo encabezado que el resto--*/
+
+        .encabezado {
+            background-color: #4b0082;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 50px auto 70px auto; 
+        }
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }   
+        .logo {
+            font-weight: bold;
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        body {
+            font-family: var(--fuente-principal); 
+            font-size: var(--tamano-letra-base); 
+            line-height: 1.5;
+            background-color: var(--color-fondo);
+            color: #333333;
+        }
+
+        .nav-links a {
+            margin: 0 10px;
+            color: var(--color-blanco);
+            display: inline-block;
+            padding: 5px 0;
+        }
+       
+       .formulario-contacto {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--color-blanco);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        .form-grupo {
+            margin-bottom: 20px;
+        }
+        .form-grupo label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .form-grupo input[type="text"],
+        .form-grupo input[type="email"],
+        .form-grupo textarea {
+            font-family: var(--fuente-principal);
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        .form-grupo input:focus,
+        .form-grupo textarea:focus {
+            border-color: var(--color-secundario); 
+            outline: none;
+        }
+        .form-grupo textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4428a7; 
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .btn:hover { background-color: #4428a7; }
+
+        .logo { color: var(--color-secundario); }

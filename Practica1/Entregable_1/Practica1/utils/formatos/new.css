@@ -1,0 +1,194 @@
+            /* --- unifico diseño de las 3 páginas--- */
+        :root {
+
+            --color-primario: #4b0082; 
+            --color-acento: #2c0489; 
+            --color-fondo: #f4f4f4; 
+            --color-blanco: #ffffff;
+                
+            /* Fuente y tamaño */
+            --fuente-principal: 'Roboto', 'Arial', sans-serif;
+            --tamano-letra-base: 16px;
+            --ancho-maximo: 1200px;
+            }   
+        
+        .barra-menu-principal {
+            background-color: #4b0082; 
+            padding: 0;
+            width: 100%;
+            color: #ffffff; 
+            /* Eliminamos bordes y esquinas que no son necesarios para un banner plano y pequeño */
+            border-radius: 5px; /* Aseguramos que no haya esquinas redondeadas */
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadimos una sombra sutil */
+        }
+        .menu-principal-container {
+            max-width: var(--ancho-maximo);
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+       .logo-caja {
+            background-color:transparent; 
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 2.5em; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .menu-derecha {
+            color: var(--color-blanco); 
+            font-weight: 500;
+            padding: 0 15px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .menu-derecha a {
+            color: var(--color-blanco); 
+            font-weight: 500;
+            padding: 0 15px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .menu-derecha a:hover {
+            background-color: rgba(255, 255, 255, 0.1); 
+            text-decoration: none;
+        }
+
+        .buscador-contenedor {
+            margin-right: 20px;
+            color:floralwhite;
+        }
+
+        .buscador-principal {
+            width: 200px; 
+            padding: 8px 10px; 
+            border: none;
+            border-radius: 4px; 
+            background-color: var(--color-blanco); 
+            color: var(--color-primario);
+        }
+        .main-container {
+            flex-grow: 1; 
+                max-width: var(--ancho-maximo); 
+                margin: 0 auto; 
+                padding: 20px;
+        }
+      
+        .categorias { 
+            display: grid; 
+            width: 100vw; 
+            margin-left: calc(50% - 50vw); 
+            max-width: none;
+            padding: 0 20px; 
+            max-width: none;
+            grid-template-columns: repeat(auto-fit, minmax(0px, 1fr)); 
+            gap: 20px;
+        }
+        .categoria-card img { 
+            width: 100%; 
+            height: 280px; 
+            object-fit: cover; 
+            filter: grayscale(20%); 
+        }
+        .categoria-card { 
+            text-align: center; 
+            background: var(--color-blanco); 
+            padding-bottom: 15px; 
+            border-radius: 4px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .categoria-card h3 { 
+            margin-top: 10px; 
+            font-size: 1em; 
+            font-weight: 500;
+        }
+        html, body {
+            height: 100%; 
+            margin: 0; 
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+            background-color: var(--color-fondo); 
+            color: var(--color-primario);
+            display: flex;
+            flex-direction: column;
+            
+            /* PROPIEDADES EL FONDO */
+            background-image: url('../imagen/fondo.jpg'); /* Ruta de la imagen */
+            background-size: cover;             /* para cubrir todo el body */
+            background-position: center center; /* centra la imagen */
+            background-repeat: no-repeat;       /* para que la imagen no se repita */
+            background-attachment: fixed;       /* para que el fondo sea fijo al hacer scroll */
+            
+            min-height: 100vh; 
+            overflow-x: hidden;
+        }
+        .main-footer {
+            background-color: #ffffff; 
+            color: #4b0082; 
+            padding: 5px 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .footer-container {
+            max-width: var(--ancho-maximo);
+            margin: 0 auto;
+            padding: 0 20px;
+            
+            /* Estructura de 4 columnas (GRID) */
+            display: grid;
+            /* crea 4 columnas de igual ancho, o se ajustan si no caben */
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+            gap: 15px;
+            justify-content: center;
+            margin-top: 0px;
+        }
+
+        .footer-bloque h4 {
+            /* Estilo para los títulos de cada bloque */
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color:#4b0082; 
+        }
+
+        .footer-bloque ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-bloque li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bloque a {
+            color: #4b0082; 
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .footer-bloque a:hover {/* color blanco al pasar el ratón */
+         color: var(--color-primario); 
+         text-decoration: underline;
+         opacity: 1;
+        }
+
